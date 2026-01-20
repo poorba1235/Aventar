@@ -1,0 +1,45 @@
+.earth {
+  position: relative;
+  z-index: 1;
+}
+
+.rocket {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url('rocket.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 2;
+  animation: rotateAroundEarth 10s linear infinite;
+}
+
+@keyframes rotateAroundEarth {
+  0% {
+    transform: rotate(0deg) translateX(200px) rotate(180deg);
+  }
+  25% {
+    transform: rotate(90deg) translateX(200px) rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg) translateX(200px) rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg) translateX(200px) rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(200px) rotate(180deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .rocket {
+    animation: none; /* Disable animation on small screens */
+    background-image: none; /* Remove background image */
+    display:none;
+  }
+
+  .earth {
+   display:none;
+  }
+}

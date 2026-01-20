@@ -1,0 +1,19 @@
+@keyframes borderAnimation {
+    0% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #ff4694;
+    }
+    100% {
+      border-color: #776fff;
+    }
+  }
+  
+  .animated-border {
+    border: 6px solid transparent; /* initial border */
+    padding: 20px; /* space inside the border */
+    border-radius: 10px;
+    animation: borderAnimation 6s infinite; /* animation duration */
+  }
+  

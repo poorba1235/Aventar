@@ -1,0 +1,143 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+.heading{
+  position: absolute;
+  top: 35%;
+  left: 8%;
+}
+
+
+.title {
+  font-size: 50px;
+  color: white;
+  font-weight: bolder;
+}
+
+.title-highlight {
+  font-size: 80px;
+  color: yellowgreen;
+  font-weight: bold;
+}
+
+
+.titles {
+  font-size: 25px;
+  color:white;
+}
+.title-btn{
+
+    background-color: black; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top:20px;
+    font-size: 16px;
+    
+}
+
+.title-btn:hover {
+  background-color: #04AA6D; 
+  color: white;
+}
+
+
+@media screen and (max-width: 480px) {
+ .heading {position: absolute;top: 10%;left: 8%;}
+ .titles { font-size: 15px;color:white;}
+ .title {
+  font-size: 30px;
+  color: white;
+  font-weight: bolder;
+}
+
+.title-highlight {
+  font-size: 40px;
+  color: yellowgreen;
+  font-weight: bold;
+}
+
+.title-btn{
+
+  background-color: black; 
+  border: none;
+  color: white;
+  padding: 8px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-top:20px;
+  font-size: 12px;
+  
+}
+
+.title-btn:hover {
+background-color: #04AA6D; 
+color: white;
+}
+
+.overlay {
+  position: absolute;
+  top: 92%;
+  left: 58%;
+  width: 165px;  /* Adjust as needed */
+  height: 60px;  /* Adjust as needed */
+  background-color: #421b93; /* Or use an image or transparent color */
+  z-index: 10;
+}
+
+
+
+
+}
+
+
+
+/* Container for tech images */
+.tech-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  width:500px;
+  justify-content: flex-start; /* Align images to the left */
+  margin-top: 10px;
+}
+
+/* Style each tech image */
+.tech-image {
+  width: calc(15% - 10px); /* Adjust width to fit 4 images per row considering margin */
+  max-width: 50px; /* Set a max width for all images */
+  max-height: 50px; /* Set a max height for all images */
+  margin: 10px; /* Spacing between images */
+  object-fit: contain; /* Ensure the image fits inside without distortion */
+  transition: transform 0.3s ease; /* Add some hover animation */
+}
+
+/* Hover effect for images */
+.tech-image:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Media query for screens 480px or smaller */
+@media (max-width: 480px) {
+  .tech-image {
+    width: calc(33.33% - 20px); /* Adjust width to fit 3 images per row */
+    max-width: 25px; /* Set a max width for all images */
+    max-height: 25px; /* Set a max height for all images */
+    margin: 5px; /* Adjust spacing between images */
+  }
+
+  .tech-images-container {
+    display: flex;
+    flex-wrap: wrap;
+    width:300px;
+    justify-content: flex-start; /* Align images to the left */
+    margin-top: 10px;
+  }
+}
