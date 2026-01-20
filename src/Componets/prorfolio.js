@@ -1,4 +1,4 @@
-import { ExternalLink, Code2, Smartphone, Database, Cloud, Cpu, Globe, Shield, MessageSquare, Zap, Palette, BarChart, ShoppingBag, HeartPulse, Home, Car, GraduationCap } from 'lucide-react';
+import { ExternalLink, Code2, Smartphone, Database, Cloud, Cpu, Globe, Shield, MessageSquare, Zap,  BarChart, ShoppingBag, HeartPulse, Home, Car, GraduationCap } from 'lucide-react';
 import React, { useState } from 'react';
 
 
