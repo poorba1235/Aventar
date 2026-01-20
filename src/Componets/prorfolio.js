@@ -454,12 +454,7 @@ export default function Portfolio() {
               >
                 Start Your Project
               </a>
-              <a
-                href="#"
-                className="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 transition-all hover:scale-105"
-              >
-                View Case Studies
-              </a>
+         
             </div>
           </div>
         </div>
