@@ -1,5 +1,5 @@
 import React from "react";
-import { MessageCircle, ExternalLink, Mail, Phone, Globe, Send, Target, Lightbulb, Heart, TrendingUp, Users, Clock, Shield, Linkedin } from 'lucide-react';
+import { MessageCircle, ExternalLink, Mail, Phone, Globe, Send,  Shield, Linkedin } from 'lucide-react';
 import '../Styles/animation.css';
 
 export default function Contact() {
