@@ -1,5 +1,5 @@
 import { ExternalLink, Code2, Smartphone, Database, Cloud, Cpu, Globe, Shield, MessageSquare, Zap, BarChart, ShoppingBag, HeartPulse, Home, Car, GraduationCap } from 'lucide-react';
-import React, { useState, useMemo, useCallback, lazy, Suspense } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 
 // Lazy load images for better performance
 const LazyImage = ({ src, alt, ...props }) => {
@@ -277,7 +277,7 @@ export default function Portfolio() {
       return showAll ? projects : projects.slice(0, 6);
     }
     return projects.filter(project => project.type === selectedCategory);
-  }, [selectedCategory, showAll]);
+  }, [selectedCategory, showAll, projects]);
 
   const handleCategoryClick = useCallback((categoryId) => {
     setIsLoading(true);
