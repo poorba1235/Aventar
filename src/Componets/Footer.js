@@ -8,7 +8,7 @@ export const Footer = () => {
        
           <div className="flex flex-col justify-between pt-5 pb-10 pl-240 border-t border-gray-800 sm:flex-row pl-4">
             <p className="text-sm  text-white">
-              © Copyright 2025 Poorna Malinhara. All rights reserved.
+              © Copyright 2025 Aventra-Tec by Poorna Malinhara. All rights reserved.
             </p>
             <div className="flex items-center mt-4 space-x-4 sm:mt-0">
               <a
