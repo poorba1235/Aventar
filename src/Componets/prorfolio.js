@@ -1,5 +1,5 @@
 import { ExternalLink, Code2, Smartphone, Database, Cloud, Cpu, Globe, Shield, MessageSquare, Zap, BarChart, ShoppingBag, HeartPulse, Home, Car, GraduationCap } from 'lucide-react';
-import React, { useState, useMemo, useCallback, lazy, Suspense } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 
 // Lazy load images for better performance
 const LazyImage = ({ src, alt, ...props }) => {
@@ -26,7 +26,7 @@ const LazyImage = ({ src, alt, ...props }) => {
 };
 
 export default function Portfolio() {
-  const projectCategories = [
+  const projectCategories = useMemo(() => [
     {
       id: 'all',
       name: 'All',
@@ -69,9 +69,9 @@ export default function Portfolio() {
       icon: Database,
       count: 2,
     },
-  ];
+  ], []);
 
-  const projects = [
+  const projects = useMemo(() => [
     // Web Applications
     {
       title: 'Real Estate CRM Platform',
@@ -258,14 +258,14 @@ export default function Portfolio() {
       features: ['RESTful', 'Rate Limiting', 'Docs', 'WebSocket'],
       icon: Database,
     },
-  ];
+  ], []);
 
-  const stats = [
+  const stats = useMemo(() => [
     { label: 'Projects', value: '12+' },
     { label: 'Satisfaction', value: '98%' },
     { label: 'On-Time', value: '95%' },
     { label: 'Technologies', value: '15+' },
-  ];
+  ], []);
 
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [showAll, setShowAll] = useState(false);
@@ -277,7 +277,7 @@ export default function Portfolio() {
       return showAll ? projects : projects.slice(0, 6);
     }
     return projects.filter(project => project.type === selectedCategory);
-  }, [selectedCategory, showAll]);
+  }, [selectedCategory, showAll, projects]);
 
   const handleCategoryClick = useCallback((categoryId) => {
     setIsLoading(true);
@@ -461,12 +461,12 @@ export default function Portfolio() {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6 px-4">
-            {[
+            {useMemo(() => [
               { icon: Globe, label: 'Web Dev', count: '50+' },
               { icon: Smartphone, label: 'Mobile Apps', count: '20+' },
               { icon: Cpu, label: 'AI Solutions', count: '15+' },
               { icon: Cloud, label: 'Cloud', count: '30+' },
-            ].map((item, index) => (
+            ], []).map((item, index) => (
               <div key={index} className="bg-gray-800/50 border border-gray-700 rounded-lg sm:rounded-xl p-4 sm:p-6 text-center hover:border-blue-500 transition-colors">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4">
                   <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-blue-500" />
